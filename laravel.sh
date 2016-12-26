@@ -3,9 +3,7 @@
 # @since 26 Dec 2016
 # @package Laravel queue service
 
-pidFile="/var/run/laravel_queue.pid"
-
-logFile="/var/log/laravel_queue.log"
+source ./helpers
 
 if [ ! -f "./artisan" ]; then
     projectPath=$2
@@ -31,10 +29,8 @@ start() {
     fi
 
     echo "* Starting web server laravel queue worker"
-    makePidFile
-    makeLogFile
     echo "*"
-    /usr/bin/php $projectPath/artisan queue:work redis & >> $logFile
+    /usr/bin/php $projectPath/artisan queue:work & >> $logFile
     echo $!>$pidFile
     echo "* Started"
 }
@@ -45,9 +41,6 @@ stop() {
     pid="$(<$pidFile)"
     kill $pid
     echo "*"
-    if [ -f $pidFile ];then
-        sudo rm $pidFile
-    fi
     echo "* Stopped"
 }
 
