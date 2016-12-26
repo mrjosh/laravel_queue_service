@@ -1,17 +1,18 @@
 #!/bin/bash
 
-pidFile="/var/run/laravel_queue.pid"
+source ./helpers
 
-logFile="/var/log/laravel_queue.log"
+echo "\033[33m* Installing ...\033[0m"
 
-echo ""
-echo "* Installing ..."
 echo "*"
+echo "*"
+echo "*"
+
 # make pid file service
 makePidFile() {
     sudo touch $pidFile
     sudo chmod -R 0777 $pidFile
-    echo "* Created pid file"
+    echo "* Created pid file > \033[33m[ $pidFile ]\033[0m"
     echo "*"
 }
 
@@ -19,11 +20,16 @@ makePidFile() {
 makeLogFile() {
     sudo touch $logFile
     sudo chmod -R 0777 $logFile
-    echo "* Created log file"
+    echo "* Created log file > \033[33m[ $logFile ]\033[0m"
     echo "*"
 }
 
-makePidFile
-makeLogFile
-echo "* Ready to go :)"
-echo ""
+if [ ! -f $pidFile ]; then
+    makePidFile
+fi
+
+if [ ! -f $logFile ]; then
+    makeLogFile
+fi
+
+echo "\033[32m* Service is ready to use , make something special :)\033[0m"
