@@ -13,18 +13,6 @@ else
     projectPath='.'
 fi
 
-# make pid file service
-makePidFile() {
-    sudo touch $pidFile
-    sudo chmod -R 0777 $pidFile
-}
-
-# make log file service
-makeLogFile() {
-    sudo touch $logFile
-    sudo chmod -R 0777 $logFile
-}
-
 checkProgress() {
     progress="$(pgrep -fl queue:work)"
 
