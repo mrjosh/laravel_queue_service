@@ -32,4 +32,12 @@ if [ ! -f $logFile ]; then
     makeLogFile
 fi
 
+echo "* Created log file > [ $logFile ]"
+echo "*"
+echo "* We need to premission to copy of needed files to filesystem ..."
+echo "*"
+sudo cp ./laravel /etc/init.d/laravel_queue
+
+sudo chmod +x /etc/init.d/laravel_queue
+
 echo "* Service is ready to use , show something special :)"
