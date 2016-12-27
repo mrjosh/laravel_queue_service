@@ -1,5 +1,6 @@
 ### Laravel Queue service in linux
-
+You can use laravel queue service in linux kernel systems .
+if something's wrong , you can fork the project and working on it and then send the merge request to merge :) 
 #### Install
 
 Download the install script
