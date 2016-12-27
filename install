@@ -36,7 +36,7 @@ echo "* Created log file > [ $logFile ]"
 echo "*"
 echo "* We need to premission to copy of needed files to filesystem ..."
 echo "*"
-sudo cp ./laravel /usr/bin/laravel_queue
+sudo cp ./laravel /etc/init.d/laravel_queue
 
 sudo cp ./.service /usr/lib/systemd/system/laravel_queue.service
 
