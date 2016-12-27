@@ -4,8 +4,8 @@ Description=Laravel queue worker service
 [Service]
 Type=oneshot
 PIDFile=/var/run/QueueService.pid
-ExecStart=/etc/init.d/laravel_queue start
-ExecStop=/etc/init.d/laravel_queue stop
+ExecStart=/usr/bin/laravel_queue start
+ExecStop=/usr/bin/laravel_queue stop
 
 [Install]
 WantedBy=multi-user.target
