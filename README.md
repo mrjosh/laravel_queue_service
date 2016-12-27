@@ -18,7 +18,7 @@ BOOM! Everything's okay , and show something amazing
 start the service
 
 ```bash
-service laravel_queue start {path_of_your_laravel_project}
+service laravel_queue start {path_of_your_laravel_project} {connection}
 ```
 
 stop the service
