@@ -22,6 +22,8 @@ checkProgress() {
     fi
 }
 
+connection=$3
+
 # start the service
 start() {
     checkProgress
@@ -32,7 +34,7 @@ start() {
 
     echo "* Starting web server laravel queue worker"
     echo "*"
-    /usr/bin/php $projectPath/artisan queue:work & >> $logFile
+    /usr/bin/php $projectPath/artisan queue:work $connection & >> $logFile
     echo $!>$pidFile
     echo "* Started"
 }
