@@ -40,7 +40,7 @@ sudo cp ./laravel /etc/init.d/laravel_queue
 
 sudo cp ./.service /etc/systemd/system/laravel_queue.service
 
-sudo chmod 664 /etc/systemd/system/name.service
+sudo chmod 664 /etc/systemd/system/laravel_queue.service
 
 sudo chmod +x /etc/init.d/laravel_queue
 
