@@ -2,8 +2,7 @@
 Description=Laravel queue worker service
 
 [Service]
-Type=oneshot
-PIDFile=/var/run/QueueService.pid
+Type=forking
 ExecStart=/usr/bin/laravel_queue start
 ExecStop=/usr/bin/laravel_queue stop
 
