@@ -7,9 +7,9 @@ Download the install script
 wget tika.pyguy.ir/dl/laravel_queue_install.sh
 ```
 
-Run the script
+Run the script with sudo
 ```bash
-sh ./laravel_queue_install.sh
+sudo sh ./laravel_queue_install.sh
 ```
 
 BOOM! Everything's okay , and show something amazing
