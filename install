@@ -1,6 +1,11 @@
 #!/bin/bash
+# @author Alireza Josheghani <josheghani.dev@gmail.com>
+# @since 26 Dec 2016
+# @package Laravel queue service installer
 
-source ./helpers
+pidFile="/var/run/QueueService.pid"
+
+logFile="/var/log/QueueService.log"
 
 echo "* Installing ..."
 
