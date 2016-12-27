@@ -34,7 +34,10 @@ start() {
 
     echo "* Starting web server laravel queue worker"
     echo "*"
-    /usr/bin/php $projectPath/artisan queue:work $connection & >> $logFile
+
+    start-stop-daemon --start --background -m --oknodo --pidfile ${pidFile} --exec \
+        /usr/bin/php $projectPath/artisan queue:work $connection & > ${logFile} 2>&1
+
     echo $!>$pidFile
     echo "* Started"
 }
@@ -42,8 +45,7 @@ start() {
 # stop the service
 stop() {
     echo "* Stopping web server laravel queue worker"
-    pid="$(<$pidFile)"
-    kill $pid
+    start-stop-daemon --stop --quiet --oknodo --pidfile $pidFile
     echo "*"
     echo "* Stopped"
 }
