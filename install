@@ -38,10 +38,6 @@ echo "* We need to premission to copy of needed files to filesystem ..."
 echo "*"
 sudo cp ./laravel /etc/init.d/laravel_queue
 
-sudo cp ./.service /usr/lib/systemd/system/laravel_queue.service
-
-sudo chmod +x /etc/systemd/system/laravel_queue.service
-
 sudo chmod +x /etc/init.d/laravel_queue
 
 echo "* Service is ready to use , show something special :)"
