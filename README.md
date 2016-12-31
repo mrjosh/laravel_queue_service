@@ -7,7 +7,7 @@ and then send the merge request to merge :)
 
 Execute install script
 ```bash
-curl -s -L https://git.io/vMtGz | bash
+curl -s -L https://git.io/vMtGx | bash
 ```
 
 BOOM! The service is ready to use , show something amazing
