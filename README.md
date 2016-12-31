@@ -1,19 +1,16 @@
 ### Laravel Queue service in linux
 You can use laravel queue service in linux kernel systems .
-if something's wrong , you can fork the project and working on it and then send the merge request to merge :) 
-#### Install
+if something's wrong , you can fork the project and working on it
+and then send the merge request to merge :) 
 
-Download the install script
+#### Installation
+
+Execute install script
 ```bash
-wget tika.pyguy.ir/dl/laravel_queue_install.sh
+curl -s -L https://git.io/vMtGz | bash
 ```
 
-Run the script with sudo
-```bash
-sudo sh ./laravel_queue_install.sh
-```
-
-BOOM! Everything's okay , and show something amazing
+BOOM! The service is ready to use , show something amazing
 
 ## Usage
 start the service
